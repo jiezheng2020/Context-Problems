@@ -25,5 +25,25 @@ function Calculator() {
 	this.total = 0;
 }
 
+Calculator.prototype.add = function(num) {
+	this.total += num
+	return this.total
+}
+
+Calculator.prototype.subtract = function(num) {
+	this.total -= num
+	return this.total
+}
+
+Calculator.prototype.multiply = function(num) {
+	this.total *= num
+	return this.total
+}
+
+Calculator.prototype.divide = function(num) {
+	this.total /= num
+	return this.total
+}
+
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = Calculator;
