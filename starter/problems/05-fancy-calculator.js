@@ -26,5 +26,17 @@ FancyCalculator.prototype.setTotal = function(num) {
 	return this.total;
 }
 
+FancyCalculator.prototype.modulo = function(num) {
+	return this.total = this.total % num
+}
+
+FancyCalculator.prototype.squared = function() {
+	return this.total = this.total * this.total
+}
+let fancyCalculator = new FancyCalculator();
+console.log(fancyCalculator.setTotal(5)) // => returns 5
+console.log(fancyCalculator.squared()) // => returns 25
+console.log(fancyCalculator.modulo(4)) // => returns 1
+console.log(fancyCalculator.total) // => returns 1
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = FancyCalculator;
