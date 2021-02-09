@@ -27,20 +27,17 @@ function Dog(name) {
 	this.name = name;
 }
 
-Dog.makeJet = function() {
-	return new this('Jet')
-}
+Dog.makeJet = function () {
+	return new this("Jet");
+};
 
-Dog.prototype.changeName = function(newName) {
-	this.name = newName
-	return this.name
-}
+Dog.prototype.changeName = function (newName) {
+	return this.name = newName;
+};
 
-Dog.prototype.speak = function(word) {
-	return `${this.name} says ${word}`
-}
-
-
+Dog.prototype.speak = function (word) {
+	return `${this.name} says ${word}`;
+};
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = Dog;

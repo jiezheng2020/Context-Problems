@@ -18,10 +18,12 @@ console.log(spyCar()); // prints "I spy a car"
 console.log(spyCar("potato")); // prints "I spy a car"
 
 ***********************************************************************/
+
 function boundByAnArg(func,arg) {
-  return function() {
-    return func(arg)
-  }
+	return func.bind(null,arg);
+//   return function() {
+//     return func(arg)
+//   }
 }
 
 function iSpy(thing) {

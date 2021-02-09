@@ -1,12 +1,12 @@
 /***********************************************************************
-Below we have provided a constructor function named 'CallCenter' that is 
+Below we have provided a constructor function named 'CallCenter' that is
 initialized with a name property and has a sayHello method.
 
 let judy = new CallCenter("Judy");
 judy.sayHello(); // prints "Hello this is Judy"
 
-You will be writing a method on the CallCenter's prototype that will be named 
-callMeLater(time). The callMeLater method will intake a time in milliseconds 
+You will be writing a method on the CallCenter's prototype that will be named
+callMeLater(time). The callMeLater method will intake a time in milliseconds
 and will invoke the `sayHello` method after the number of milliseconds has passed.
 
 This can be accomplished using the global.setTimeout function to invoke the
@@ -35,9 +35,13 @@ function CallCenter(name) {
 	this.name = name;
 }
 
-CallCenter.prototype.sayHello = function() {
+CallCenter.prototype.sayHello = function () {
 	console.log("Hello this is " + this.name);
-}
+};
+
+CallCenter.prototype.callMeLater = function (time) {
+	setTimeout(this.sayHello.bind(this), time);
+};
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = CallCenter;

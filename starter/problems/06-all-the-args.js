@@ -1,4 +1,4 @@
-/*********************************************************************** 
+/***********************************************************************
 
 Write a function named `allTheArgs`. This function will intake a function and
 multiple arguments and will return a function. When the function
@@ -33,7 +33,22 @@ console.log(bowSandy("Joe", "Nico")); // prints "You bowed to Sandy and Joe and 
 
 ***********************************************************************/
 
-// your code here!
+function allTheArgs(func, ...args) {
+	return func.bind(null, ...args);
+}
+
+const adder = (...nums) =>	nums.reduce((num, sum) => sum + num);
+
+// let addFive = allTheArgs(adder, 5);
+
+// console.log(addFive()); // prints 5
+// console.log(addFive(5)); // prints 10
+// console.log(addFive(10)); // prints 15
+
+// let addTwenty = allTheArgs(adder, 5, 10, 5);
+
+// console.log(addTwenty(5)); // prints 25
+// console.log(addTwenty(10)); // prints 30
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 

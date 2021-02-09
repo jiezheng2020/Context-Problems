@@ -1,12 +1,12 @@
 /***********************************************************************
 Declare a constructor function named PartyPlanner. A partyPlanner will
-have a property named guestList that will point to an array. 
+have a property named guestList that will point to an array.
 
 A partyPlanner will additionally have two instance methods:
-1. throwParty() - which will return a different string depending on the number 
- guests on the guestList. 
+1. throwParty() - which will return a different string depending on the number
+ guests on the guestList.
   A. If there are no guests the returned string request more guests
-  B. If there are guests on the guestList the returned sting will include those 
+  B. If there are guests on the guestList the returned sting will include those
   guest's names.
 
 2. addToGuestList(name) - will add a name to the party's guestList property
@@ -22,7 +22,7 @@ console.log(party.throwParty()); // prints "gotta add people to the guest list"
 party.addToGuestList("James");
 console.log(party.throwParty()); // prints "Welcome to the party James"
 
-party.addToGuestList("Alvin"); 
+party.addToGuestList("Alvin");
 console.log(party.throwParty()); // prints "Welcome to the party James and Alvin"
 
 Example 2:
@@ -33,13 +33,30 @@ party2.addToGuestList("Lucy");
 console.log(party2.throwParty()); // prints "Welcome to the party Lucy"
 ***********************************************************************/
 
-// your code here
+function PartyPlanner() {
+	this.guestList = [];
+}
+
+PartyPlanner.prototype.throwParty = function () {
+	if (this.guestList.length === 0) {
+		return "gotta add people to the guest list";
+	} else {
+		let qwe = [];
+		this.guestList.forEach((element) => {
+			qwe.push(element);
+		});
+		return "Welcome to the party " + qwe.join(" and ");
+	}
+};
+
+PartyPlanner.prototype.addToGuestList = function (name) {
+	this.guestList.push(name);
+};
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
-  module.exports = PartyPlanner;
+	module.exports = PartyPlanner;
 } catch (e) {
-  // catch the ref err
-  module.exports = null;
+	// catch the ref err
+	module.exports = null;
 }
-

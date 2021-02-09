@@ -1,8 +1,8 @@
 /***********************************************************************
 Write a function named `callOnTarget(function, obj1, ob2)`.  `callOnTarget` will
 accept a function to invoke that will use the first passed in object, (obj1), as
-the context for that function call and the second passed in object, (obj2), as 
-an argument being passed to the function upon invocation. 
+the context for that function call and the second passed in object, (obj2), as
+an argument being passed to the function upon invocation.
 Take a look at the below examples for more clarity!
 
 **Hint**: use Function#bind()!
@@ -35,13 +35,17 @@ console.log(callOnTarget(dog.chase, cat, dog)); // "Woof, my name is Breakfast a
 
 ***********************************************************************/
 
-// your code here
+function callOnTarget(func, obj1, obj2) {
+	let f = func.bind(obj1);
+	return f(obj2);
+	// return func.bind(obj1, obj2)()
+}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
-  module.exports = callOnTarget;
+	module.exports = callOnTarget;
 } catch (e) {
-  // catch the ref err
-  module.exports = null;
+	// catch the ref err
+	module.exports = null;
 }

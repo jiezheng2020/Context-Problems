@@ -26,23 +26,19 @@ function Calculator() {
 }
 
 Calculator.prototype.add = function(num) {
-	this.total += num
-	return this.total
+	return this.total += num
 }
 
 Calculator.prototype.subtract = function(num) {
-	this.total -= num
-	return this.total
+	return this.total -= num
 }
 
 Calculator.prototype.multiply = function(num) {
-	this.total *= num
-	return this.total
+	return this.total *= num
 }
 
 Calculator.prototype.divide = function(num) {
-	this.total /= num
-	return this.total
+	return this.total /= num
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
