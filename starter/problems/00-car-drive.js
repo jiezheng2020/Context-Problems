@@ -1,7 +1,7 @@
 /***********************************************************************
-Below we've declared the Car constructor function that has a property 
-representing speed. Write an instance method on the Car's prototype 
-named `drive(newSpeed)`. This method should set the speed to the passed in 
+Below we've declared the Car constructor function that has a property
+representing speed. Write an instance method on the Car's prototype
+named `drive(newSpeed)`. This method should set the speed to the passed in
 argument, and then return the present speed.
 
 **Hint**: Use the keyword *this*!
@@ -21,8 +21,17 @@ console.log(car) // -> {speed: 100, drive: ƒ}
 ***********************************************************************/
 
 function Car() {
-	this.speed = 0
+	this.speed = 0;
 }
+
+Car.prototype.drive = function (num) {
+	this.speed = num;
+	return this.speed;
+};
+
+let car = new Car();
+console.log(car.drive(10)); // => returns 10
+console.log(car); // => {speed: 10, drive: ƒ}
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = Car;
